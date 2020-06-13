@@ -1,0 +1,53 @@
+-- DROP DATABASE IF EXISTS Divercity;
+CREATE DATABASE IF NOT EXISTS Divercity;
+USE Divercity;
+
+DROP TABLE IF EXISTS Reservations;
+DROP TABLE IF EXISTS Pictures;
+DROP TABLE IF EXISTS Students;
+DROP TABLE IF exists Halls;
+
+CREATE TABLE IF NOT EXISTS Halls (
+	H_ID INT AUTO_INCREMENT,
+    TYPE CHAR(10),
+	PPH INT NOT NULL DEFAULT 5,
+	AMOUNT INT,
+	CONSTRAINT HallsPrimaryKey PRIMARY KEY(H_ID)
+);
+
+CREATE TABLE IF NOT EXISTS Students (
+	S_ID INT auto_increment,
+	StudentName CHAR(50),
+    Email CHAR(50) UNIQUE,
+	AuthLevel INT DEFAULT 1,
+    UserPass CHAR(100),
+	CONSTRAINT StudentsPrimaryKey PRIMARY KEY(S_ID)
+);
+
+CREATE TABLE IF NOT EXISTS Pictures (
+	P_ID INT auto_increment,
+	NamePath CHAR(255),
+    OriginalName CHAR(64),
+	H_ID INT,
+	CONSTRAINT PicsPrimaryKey PRIMARY KEY(P_ID),
+	CONSTRAINT PicsHallsForeignKey FOREIGN KEY (H_ID) REFERENCES Halls(H_ID)
+);
+
+CREATE TABLE IF NOT EXISTS Reservations (
+	R_ID INT auto_increment,
+	S_ID INT,
+	H_ID INT,
+	TimeOfRes CHAR(50),
+	CONSTRAINT ReservationsPrimaryKey PRIMARY KEY (R_ID),
+	CONSTRAINT ResStudentForeignKey FOREIGN KEY (S_ID) REFERENCES Students(S_ID),
+	CONSTRAINT ResHallsForeignKey FOREIGN KEY (H_ID) REFERENCES Halls(H_ID)
+);
+
+INSERT INTO Halls(PPH,Amount,Type) VALUES (15,NULL,'Hall');
+INSERT INTO Halls(PPH,Amount,Type) VALUES (30,NULL,'Hall');
+INSERT INTO Halls(PPH,Amount,Type) VALUES (20,10,'Object');
+
+SELECT * FROM Reservations;
+SELECT * FROM Students;
+SELECT * FROM Halls;
+SELECT * FROM Pictures;

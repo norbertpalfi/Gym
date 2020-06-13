@@ -1,0 +1,39 @@
+<h1 class="text-center mb-3 display-1">Register</h1>
+<form action="/register" method="POST" class="mb-4">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" name="name" id="name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" name="email" id="email" class="form-control">
+    </div>
+    {{#if alreadyRegistered}}
+        <label class="form-control text-danger bg-warning" for="Already In">This email has already registered</label>
+    {{/if}}
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" name="password" id="password" class="form-control">
+    </div>
+        <div class="form-group">
+        <label for="Confirm Password">Confirm Password</label>
+        <input type="password" name="password2" id="password2" class="form-control">
+    </div>
+    {{#if samePass}}
+        <label class="form-control text-danger bg-warning" for="Empty fields">The 2 passwords did not match.</label>
+    {{/if}}
+    <div class="form-group">
+        <label for="Auth Level">Temporary label - Auth level</label>
+        <select id="authlevel" name="authlevel" class="form-control">
+            <option value=1>Student</option>
+            <option value=2>Admin</option>
+        </select>
+    </div>
+    {{#if empty}}
+        <label class="form-control text-danger bg-warning" for="Empty fields">All fields must be filled out.</label>
+    {{/if}}
+    <input type="submit" value="Add user" class="btn btn-success btn-block">
+    <span class="form-group">
+        <a class="btn btn-info btn-block" role="button" href="/">Back</a>
+    </span>
+</form>

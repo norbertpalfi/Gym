@@ -1,0 +1,165 @@
+/* Navbar container */
+body{
+    background-image: url("ubuntu.jpg");
+    background-size: 1200px;
+    background-repeat: repeat-x;
+}
+
+h1,h2{
+    color: white;
+    text-indent: 15%;
+    font-size: 40px;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+button.middletext{
+    color: white;
+    background-color: green;
+    margin-left: 15%;
+    font-size: large;
+    font-family: "Times New Roman", Times, serif;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+  }
+  .navbar2{
+    overflow: hidden;
+    background-color: #444;
+    font-family: Arial;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+      
+    margin-left: 100px;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .navbar div{
+    float:right;
+    margin-right: 100px;
+  }
+  
+  .navbar2 a {
+      
+    margin-left: 100px;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+ 
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+.navbar2 input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 100px;
+    font-size: 17px;
+  }
+
+
+p.a{
+    text-indent: 11%; 
+    color: black;
+    font-size: 30px;
+}
+
+a.spotlight{
+    text-indent: 13%; 
+    margin-left:300px;
+
+}
+
+a.ubuntu{
+    background-color: darkorange; 
+}
+
+
+  .flex-container {
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    
+  }
+
+
+  button.viewmoretext{
+    color: black;
+    background-color: grey;
+    margin-left: 10%;
+    font-size: large;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+p.stepsp{
+    text-align: center;
+    font-size: 30px;
+}
+
+img.steps{
+    margin-left: 200px;
+}

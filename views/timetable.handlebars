@@ -1,0 +1,52 @@
+{{>topbar data=data}}
+<h1 class="text-center mb-3 display-1">DiverCity - Reservation</h1>
+<form action="/timetable/" method="post">
+    <div class="form-group">
+        <label for="Type">What do you want to reserve?</label>
+        <select id="roomID" name="roomID" class="form-control">
+            {{#each halls}}
+            <option value={{this.H_ID}}>Hall with ID {{this.H_ID}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Student">Who are you?</label>
+        <select id="student" name="name" class="form-control">
+            {{#each students}}
+            <option value={{this.S_ID}}>{{this.StudentName}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Date">When do you want the reservation? ( 2 Hours from this point )</label>
+        <input type="datetime-local" id="dateTime" name="dateTime" class="form-control mb-2">
+        <label for="WrongDate" class="text-danger bg-warning">{{fillDate}}</label>
+    </div>
+    <input type="submit" value="Order it" class="btn btn-success btn-block mb-2">
+</form>
+<a class="btn btn-info btn-block mb-2" role="button" href="/">Back</a>
+{{#if allSet}}
+<div class="card bg-success text-white text-center p-3 mb-3">
+    <blockquote class="blockquote mb-0">
+        <p>Reservation successfully made.</p>
+        <footer class="blockquote-footer text-white">
+            <small>
+                If anything comes up please contact <cite title="Source Title">GOD HIMSELF</cite>
+            </small>
+        </footer>
+    </blockquote>
+</div>
+{{/if}}
+
+{{#if occupied}}
+<div class="card bg-danger text-white text-center p-3 mb-3">
+    <blockquote class="blockquote mb-0">
+        <p>Sadly, the room is occupied in this time interval</p>
+        <footer class="blockquote-footer text-white">
+            <small>
+                Try choosing another time <cite title="Source Title">Best regards</cite>
+            </small>
+        </footer>
+    </blockquote>
+</div>
+{{/if}}

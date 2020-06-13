@@ -1,0 +1,103 @@
+/* szoveggel egyutt gordulo hatter, X tengely menten ismetli magat */
+
+body{
+
+  
+  background-image: url("whitebrick.jpg") !important;
+  
+  background-size : 940px;
+  background-repeat: repeat-x;
+  background-attachment: scroll;
+
+}
+
+/* ket kulobozo h2 class */
+h2.first {
+  color: purple;
+}
+
+h2.second {
+  color: blueviolet;
+}
+
+/* altalanos osztaly, p es ul-ra */ 
+.pul {
+  color: deeppink;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: overline dotted green;
+}
+
+/* h1,h2 azonos tulajdonsagok, egyszer irjuk le */
+h1,h3 {
+ color: red;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+/* kontextus szelektor navon beluli li elemre*/
+nav li {
+  color: red;
+  background-color: chartreuse;
+  display: inline;
+}
+
+
+/* active, visited, hover */
+
+a.link:link {
+  color: red;
+  text-decoration: underline
+}
+
+a.link:visited {
+  color: green;
+  font-style: italic;
+}
+
+a.link:hover {
+  color: hotpink;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Keretezett bekezdes, balra hagyott hellyel */
+
+p.bordered {
+  border-style: solid;
+  padding-left: 300px;
+}
+
+/* tablazat kulonbozo sorai */
+
+.TFtable tr:nth-child(odd){ 
+  background: lightblue;
+  border: solid;
+}
+
+.TFtable tr:nth-child(even){
+  background: lightcyan   ;
+  border: solid;
+}
+
+.TFtable {
+  border: solid;
+  width: 35%;
+}
+
+/* 3 oszlop flex box */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+/* media querry hatter nyomtatas hamis */
+
+@media print {
+   body{
+    background-image: url("whitebrick.jpg") !important;
+  }
+}   

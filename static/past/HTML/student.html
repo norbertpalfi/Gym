@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Reservations - Project by Diver</title>
+  <script src="scripts.js"></script>
+  <link rel="icon"
+    href="https://cdn0.iconfinder.com/data/icons/scuba-diving-flat-icons/135/Scuba_Diving_Equipments-05-512.png">
+  <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 class="section-spacing">DiverCity - Student panel</h1>
+  <hr>
+  <form method="POST" action="/timetable/" target='_blank'>
+    <div class="section-spacing">
+      <p>Name:</p>
+      <input type="text" name="name" id="name">
+    </div>
+    <div class="section-spacing">
+      <p>Room ID:</p>
+      <input type="number" name="roomID" id="roomID">
+    </div>
+    <div class="section-spacing" id="toBeHidden">
+      <p>Time of reservation(2 hours):</p>
+      <input type="datetime-local" name="dateTime" id="dateTime">
+    </div>
+    <div class="section-spacing">
+      <input type="submit" name="validate" value="Confirm" id="validate">
+    </div>
+  </form>
+
+
+
+
+</body>
+
+</html>

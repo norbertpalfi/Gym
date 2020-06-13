@@ -1,0 +1,22 @@
+<h1 class="text-center mb-3 display-1">Login</h1>
+<form action="/login" method="POST" class="mb-4">
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" name="email" id="email" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" name="password" id="password" class="form-control">
+    </div>
+    {{#if empty}}
+        <label class="form-control text-danger bg-warning" for="Empty fields">All fields must be filled out.</label>
+    {{/if}}
+    {{#if wrongInput}}
+        <label class="form-control text-danger bg-warning" for="Empty fields">Wrong username or password.</label>
+    {{/if}}
+    <input type="submit" value="Login" class="btn btn-success btn-block">
+    <span class="form-group">
+        <a class="btn btn-success btn-block" role="button" href="/register">I dont have an account yet</a>
+        <a class="btn btn-info btn-block" role="button" href="/">Back</a>
+    </span>
+</form>

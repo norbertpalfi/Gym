@@ -1,0 +1,8 @@
+<nav class="navbar navbar-dark bg-success rounded">
+  {{#if data.admin}}
+    <a class="navbar-brand" href="/login">Status: Logged in, hello {{data.email}}</a>
+    <a class="btn btn-primary" role="button" href="/logout">Log out</a>
+  {{else}}
+    <a class="navbar-brand" href="/login">Status: Not logged in. Click me to log in!</a>
+  {{/if}}
+</nav>

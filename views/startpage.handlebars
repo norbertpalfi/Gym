@@ -1,0 +1,25 @@
+{{>topbar data=data}}
+<h1 class="text-center mb-3 display-1">Our most beloved features</h1>
+<h4>This is what we are offering...</h4>
+<ul class="list-group">
+    {{#each halls}}
+    {{#if this.AMOUNT }}
+    <li class="list-group-item">ID: {{this.H_ID}} | Type: {{this.TYPE}} | Price Per Hour: {{this.PPH}} | AMOUNT
+        {{this.AMOUNT}} <a class="btn btn-info btn-block" role="button" href="/halls/{{this.H_ID}}">Photos</a>
+        <input type="button" value="{{this.H_ID}}. Timetable" class="btn btn-secondary btn-block mb-2" onclick="getTimetable({{this.H_ID}})">
+        <p id="occupied{{this.H_ID}}"></p>
+    </li>
+
+    {{else}}
+    <li class="list-group-item">ID: {{this.H_ID}} | Type: {{this.TYPE}} | Price Per Hour: {{this.PPH}}
+        <a class="btn btn-info btn-block" role="button" href="/halls/{{this.H_ID}}">Photos</a>
+        <input type="button" value="{{this.H_ID}}. Timetable" class="btn btn-secondary btn-block mb-2" onclick="getTimetable({{this.H_ID}})">
+        <p id="occupied{{this.H_ID}}"></p>
+    </li>
+    {{/if}}
+    {{/each}}
+    <a class="btn btn-success btn-block mt-4" role="button" href="/timetable">Temp button - Student only:
+        Timetables.</a>
+    <a class="btn btn-warning btn-block" role="button" href="/halls">Temp button - Admins only - Utilities</a>
+    <div id="snackbar">Some text some message..</div>
+</ul>

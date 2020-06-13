@@ -1,0 +1,54 @@
+p {
+    margin-bottom: 0px;
+}
+
+.error {
+	border-color: red;
+	transition: all 2s ease-in-out;
+	color: red;
+}
+
+.section-spacing {
+	margin-bottom: 20px;
+	margin-left: 100px;
+}
+
+
+.hidden {
+	display: none ;
+}
+
+.footerdate {
+	width: 100%;
+    overflow: hidden;
+    margin: 5px auto 10px auto;
+    text-align: center;
+}
+
+.inline-div {
+    display: inline-block;
+    margin-left: 19%;
+}
+.inline-txtarea {
+    resize: none;
+    border : 2px solid blue;
+    height:125px;
+    width: 400px;
+}
+
+.highlight {
+	color: red;
+}
+
+.printchatbox {
+	margin-left: 60%
+}
+
+.design-text {
+	text-align: center;
+}
+
+.right-float {
+	float: right;
+	margin-right: 30px;
+}

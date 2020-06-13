@@ -1,0 +1,13 @@
+.drawingBoard {
+    border: 1px solid black;
+    width: 1000;
+    height: 600;
+}
+body{
+	margin-right: 30px;
+	margin-left: 30px;
+}
+
+p {
+    color: black;
+}

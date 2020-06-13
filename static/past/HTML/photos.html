@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Upload picture - Project by Diver</title>
+  <!-- <script src="datetime-local-polyfill.min.js"></script> -->
+  <script src="scripts.js"></script>
+  <link rel="icon"
+    href="https://cdn0.iconfinder.com/data/icons/scuba-diving-flat-icons/135/Scuba_Diving_Equipments-05-512.png">
+  <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 class="section-spacing">DiverCity - Pictures panel</h1>
+  <hr>
+  <form action="/upload_file" method="POST" enctype="multipart/form-data" target='_blank'>
+    <div class="section-spacing">
+      <p>ID:</p>
+      <input type="text" name="private" id="private">
+    </div>
+    <div class="section-spacing">
+      <p>Image URL:</p>
+      <input type="file" name="myfile" id="myfile">
+    </div>
+    <div class="section-spacing">
+      <input type="submit" value="Add">
+    </div>
+  </form>
+</body>
+
+</html>

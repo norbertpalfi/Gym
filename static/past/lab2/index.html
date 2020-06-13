@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 2</title>
+    <script src="lab2.js"></script>
+    <link rel="stylesheet" type="text/css" href="lab2.css">
+</head>
+<body onload="lastModifiedDate()">
+
+<h1 class="section-spacing">Lab2 homework</h1>
+<form method="post" onsubmit="validation();">
+    <div class="section-spacing">
+        <p>Name:</p>
+        <input type="text" name="name" id="name" pattern="[A-Z][a-z ]{1,}">
+        <div id="nameNotOk"></div>
+    </div>
+    <div class="section-spacing">
+        <p>Date of birth:</p>
+        <input type="date" name="date" id="date">
+    </div>
+    <div class="section-spacing">
+        <p>Email:</p>
+        <input type="email" name="email" id="email" onblur="emailValidation()">
+        <div id="emailNotOk"></div>
+    </div>
+    <div class="section-spacing"> 
+        <p>Website:</p>
+        <input type="url" name="site" id="site" onblur="siteValidation()">
+        <div" id="siteNotOk"></div>
+    </div>
+    <div class="section-spacing">
+        <p>Password:</p>
+        <input type="password" name="password" id="password">
+        <div id="pwLessThanSix"></div>
+        <div id="pwMoreThanTen"></div>
+        <div id="pwBadPattern"></div>
+    </div>
+
+
+    <div class="section-spacing">
+        <input type="button" onclick="validation()" name="validate" value="Validate" id="validate">
+        <input class="hidden" type="button" name="submit" value="Submit" id="submit">
+    </div>
+
+</form>
+<div class="section-spacing" id="empty"></div>
+<div class="section-spacing" id="details"></div>
+
+<hr> 
+ <!-- 2. resz -->
+<div class="inline-div">
+    <p class="design-text">Highligted Words</p>
+    <textarea cols="15" rows="15" class="inline-txtarea" id="textarea1"></textarea>
+</div>
+<div class="inline-div">
+<p  class="design-text">The text to search for</p>
+    <textarea cols="15" rows="15" class="inline-txtarea" id="textarea2" onkeyup="moveText()"></textarea>
+</div>
+<div class='printchatbox section-spacing' id='printchatbox'></div>
+
+
+<footer>
+    <div class="footerdate" id="footerdate">
+    </div>
+    <p>
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" class="right-float">
+        
+    </p>
+</footer>
+
+
+
+
+</body>
+
+
+
+</html>

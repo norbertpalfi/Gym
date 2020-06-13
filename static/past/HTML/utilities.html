@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add utilities - Project by Diver</title>
+  <script src="scripts.js"></script>
+  <link rel="icon"
+    href="https://cdn0.iconfinder.com/data/icons/scuba-diving-flat-icons/135/Scuba_Diving_Equipments-05-512.png">
+  <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 class="section-spacing">DiverCity - Admin panel</h1>
+  <hr>
+  <form action="/halls/" method="POST" target='_blank'>
+    <div class="section-spacing">
+      <p>Add...</p>
+      <select id="hallutil" onchange='ok()' name="hallutil">
+        <option value="object">Object</option>
+        <option value="room">Sports hall</option>
+      </select>
+    </div>
+    <div class="section-spacing">
+      <p>Price per hour:</p>
+      <input type="text" name="price" id="price">
+    </div>
+    <div class="section-spacing" id="toBeHidden">
+      <p>Amount:</p>
+      <input type="number" name="amount" id="amount">
+    </div>
+    <div class="section-spacing">
+      <input type="submit" name="validate" value="Add" id="validate">
+    </div>
+    
+  </form>
+  <div class="section-spacing" id="cheat">
+
+  </div>
+
+
+
+</body>
+
+</html>

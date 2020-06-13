@@ -1,0 +1,45 @@
+{{>topbar data=data}}
+<h1 class="text-center mb-3 display-1">{{title}}</h1>
+<form action="/halls" method="POST" class="mb-4">
+    <div class="form-group">
+        <label for="Type">Type</label>
+        <select id="hallutil" onchange='ok()' name="hallutil" class="form-control">
+            <option value="object">Object</option>
+            <option value="room">Sports hall</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="PricePerHour" class="">Price Per Hour</label>
+        <input type="number" name="price" id="price" class="form-control">
+    </div>
+    <div class="form-group" id="toBeHidden">
+        <label for="Amount">Amount</label>
+        <input type="number" name="amount" id="amount" class="form-control">
+        {{#if objnoamount}}
+        <label for="ObjectNoAmount" class="form-control text-danger bg-warning">{{objnoamount}}</label>
+        {{/if}}
+        {{#if hallamount}}
+        <label for="HallHasAmount" class="form-control text-danger bg-warning">{{hallamount}}</label>
+        {{/if}}
+    </div>
+    {{#if empty}}
+    <label class="form-control text-danger bg-warning" for="Empty fields">{{empty}}</label>
+    {{/if}}
+    <input type="submit" value="Add object/hall" class="btn btn-success btn-block">
+    <span class="form-group">
+        <a class="btn btn-info btn-block" role="button" href="/">Back</a>
+    </span>
+</form>
+<h4>Elements</h4>
+<ul class="list-group">
+    {{#each halls}}
+
+    {{#if this.AMOUNT }}
+    <li class="list-group-item">ID: {{this.H_ID}} | Type: {{this.TYPE}} | Price Per Hour: {{this.PPH}} | AMOUNT
+        {{this.AMOUNT}} <a class="btn btn-info btn-block" role="button" href="/halls/{{this.H_ID}}">Photos</a></li>
+    {{else}}
+    <li class="list-group-item">ID: {{this.H_ID}} | Type: {{this.TYPE}} | Price Per Hour: {{this.PPH}}<a
+            class="btn btn-info btn-block" role="button" href="/halls/{{this.H_ID}}">Photos</a></li>
+    {{/if}}
+    {{/each}}
+</ul>
